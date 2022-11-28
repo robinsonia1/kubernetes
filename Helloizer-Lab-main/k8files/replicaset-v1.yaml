@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  labels:
+    app: helloizer
+    version: "1"
+  name: helloizer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloizer
+      version: "1"
+  template:
+    metadata:
+      labels:
+        app: helloizer
+        version: "1"
+    spec:
+      containers:
+        - name: helloizer
+          image: gcr.io/cloud-appstate-fall22/helloizer:v1
