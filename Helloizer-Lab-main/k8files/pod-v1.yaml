@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: helloizer
+  name: helloizer:v1
 spec:
   containers:
     - image: gcr.io/cloud-appstate-fall22/helloizer:v1
-      name: helloizer
+      name: helloizer:v1
       ports:
         - containerPort: 8080
           name: http
